@@ -1,0 +1,25 @@
+Установка платежной системы и изменение токенов 
+Заливаем базу данных sql.sql 
+В системном файле base.php меняем данные от БД
+Цепляем файл pay.php на http get queru
+
+Пример: https://test.ru/pay.php?amount=100&user=1&url=test.ru&desc=Оплата подписки за друга
+
+Разъясняю что и за что отвечает в данной ссылке:
+amount - сумма 
+user - id пользователя из списка контактов 
+url - страница перенаправления пользователей после платежа (!url пишем без http)
+desc - Дексрипшин/Назначение/Название платежа
+
+Файловая система скрипта:
+
+pay.php - Index pay script 
+base.php - connection base data
+listpay.php - test file list transaction 
+redirect.php - file redirect url success pay
+chekpay.php - file webhook + api chat-bot platform
+reg.php - add file registration chat-bot  
+
+
+
+
